@@ -1,3 +1,3 @@
-Este proyecto tiene como objetivo crear una aplicacion que visualize todos los restaurantes, pubs, cafeterias, etc, que esten registrados por Sernatur.
+Este proyecto tiene como objetivo crear una aplicación que visualize todos los restaurantes, pubs, cafeterías, entre otros, que están registrados por Sernatur.
 
 fuente de datos: http://datos.gob.cl/datasets/ver/3820
