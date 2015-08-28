@@ -1,0 +1,80 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+	<head>
+	
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Antofagasta</title>
+	
+	</head>
+		<body>
+		
+		
+		<form name="formulario" method="post" action="">
+	<div align="center">
+			Provincia
+				<select name="Regiones" OnChange="cambiar()">
+					<option value="Antofagasta" selected>Antofagasta</option>
+					<option value="El Loa">El Loa</option>
+					
+				</select>
+			Comuna
+				<select name="comunas">
+					<option value="Enero" selected></option>
+					<option value="Febrero"></option>
+					<option value="Marzo"></option>
+				</select>
+	</div>
+</form>
+		
+		
+		<script language="JavaScript">
+		
+		function cambiar()
+		{
+			var index=document.forms.formulario.Regiones.selectedIndex;
+
+			formulario.comunas.length=0;
+
+			if(index==0) Antofagasta();
+			if(index==1) El_Loa();
+			
+		}	
+		function Antofagasta()
+		{
+			opcion0=new Option("Antofagasta","Antofagasta","defauldSelected");
+			opcion1=new Option("Taltal","Taltal");
+			
+
+			document.forms.formulario.comunas.options[0]=opcion0;
+			document.forms.formulario.comunas.options[1]=opcion1;
+			
+		}
+			
+		function El_Loa()
+		{
+			opcion0=new Option("Calama","Calama","defauldSelected");
+			opcion1=new Option("Ollague","Ollague");
+			opcion2=new Option("San Pedro de Atacama","San Pedro de Atacama");
+			
+			
+
+			document.forms.formulario.comunas.options[0]=opcion0;
+			document.forms.formulario.comunas.options[1]=opcion1;
+			document.forms.formulario.comunas.options[2]=opcion2;
+			
+		}	
+
+
+		
+
+		</script>
+					
+			{% for rest in object_list %}
+				
+				<li><b>Nombre: </b>{{rest.nom_reg}}	</li>
+				
+				{% endfor %}
+	</body
+
+
+</html>

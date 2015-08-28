@@ -1,0 +1,74 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+	<head>
+	
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Tarapacá</title>
+	
+	</head>
+	<body>
+		
+		
+<form name="formulario" method="post" action="">
+	<div align="center">
+			Provincia
+				<select name="Regiones" OnChange="cambiar()">
+					<option value="Iquique" selected>Iquique</option>
+					<option value="Tamarugal">Tamarugal</option>
+					
+				</select>
+			Comuna
+				<select name="meses">
+					<option value="Enero" selected></option>
+					<option value="Febrero"></option>
+					<option value="Marzo"></option>
+				</select>
+	</div>
+</form>
+		
+		
+		<script language="JavaScript">
+		
+		function cambiar()
+		{
+			var index=document.forms.formulario.Regiones.selectedIndex;
+
+			formulario.meses.length=0;
+
+			if(index==0) Iquique();
+			if(index==1) Tamarugal();
+			
+		}	
+		function Iquique()
+		{
+			opcion0=new Option("Iquique","Iquique","defauldSelected");
+			
+
+			document.forms.formulario.meses.options[0]=opcion0;
+			
+		}
+			
+		function Tamarugal()
+		{
+			opcion0=new Option("Pozo Almonte","Pozo Almonte","defauldSelected");
+			
+
+			document.forms.formulario.meses.options[0]=opcion0;
+			
+		}	
+
+
+		
+
+		</script>
+		
+		
+		
+		
+		
+		
+	</body
+	
+
+
+</html>
