@@ -1,0 +1,77 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+	<head>
+	
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Atacama</title>
+	
+	</head>
+		<body>
+		
+		
+<form name="formulario" method="post" action="">
+	<div align="center">
+			Provincia
+				<select name="Regiones" OnChange="cambiar()">
+					<option value="Antofagasta" selected>Copiapó</option>
+					<option value="El Loa">Chañaral</option>
+					
+				</select>
+			Comuna
+				<select name="comunas">
+					<option value="Enero" selected></option>
+					<option value="Febrero"></option>
+					<option value="Marzo"></option>
+				</select>
+	</div>
+</form>
+		
+		
+		<script language="JavaScript">
+		
+		function cambiar()
+		{
+			var index=document.forms.formulario.Regiones.selectedIndex;
+
+			formulario.comunas.length=0;
+
+			if(index==0) Copiapo();
+			if(index==1) Chañaral();
+			
+		}	
+		function Copiapo()
+		{
+			opcion0=new Option("Copiapó","Copiapó","defauldSelected");
+			opcion1=new Option("Caldera","Caldera");
+			
+
+			document.forms.formulario.comunas.options[0]=opcion0;
+			document.forms.formulario.comunas.options[1]=opcion1;
+			
+		}
+			
+		function Chañaral()
+		{
+			opcion0=new Option("Chañaral","Chañaral","defauldSelected");
+			
+			
+			
+
+			document.forms.formulario.comunas.options[0]=opcion0;
+			
+		}	
+
+
+		
+
+		</script>
+		
+		
+		
+		
+		
+		
+	</body
+
+
+</html>

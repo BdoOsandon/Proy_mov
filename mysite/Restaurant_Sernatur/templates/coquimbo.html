@@ -1,0 +1,88 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+	<head>
+	
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Coquimbo</title>
+	
+	</head>
+		<body>
+		
+		
+<form name="formulario" method="post" action="">
+	<div align="center">
+			Provincia
+				<select name="Regiones" OnChange="cambiar()">
+					<option value="Antofagasta" selected>Elqui</option>
+					<option value="El Loa">Choapa</option>
+					
+				</select>
+			Comuna
+				<select name="comunas">
+					<option value="Enero" selected></option>
+					<option value="Febrero"></option>
+					<option value="Marzo"></option>
+				</select>
+	</div>
+</form>
+		
+		
+		<script language="JavaScript">
+		
+		function cambiar()
+		{
+			var index=document.forms.formulario.Regiones.selectedIndex;
+
+			formulario.comunas.length=0;
+
+			if(index==0) Elqui();
+			if(index==1) Choapa();
+			
+		}	
+		function Elqui()
+		{
+			opcion0=new Option("La Serena","La Serena","defauldSelected");
+			opcion1=new Option("Coquimbo","Coquimbo");
+			opcion2=new Option("Andacollo","Andacollo");
+			opcion3=new Option("La Higuera","La Higuera");
+			opcion4=new Option("Paihuuano","Paihuuano");
+			opcion5=new Option("Vicuña","Vicuña");
+			
+
+			document.forms.formulario.comunas.options[0]=opcion0;
+			document.forms.formulario.comunas.options[1]=opcion1;
+			document.forms.formulario.comunas.options[2]=opcion2;
+			document.forms.formulario.comunas.options[3]=opcion3;
+			document.forms.formulario.comunas.options[4]=opcion4;
+			document.forms.formulario.comunas.options[5]=opcion5;
+			
+		}
+			
+		function Choapa()
+		{
+			opcion0=new Option("Illapel","Illapel","defauldSelected");
+			opcion1=new Option("Los Vilos","Los Vilos");
+			opcion2=new Option("Salamanca","Salamanca");
+			
+			
+
+			document.forms.formulario.comunas.options[0]=opcion0;
+			document.forms.formulario.comunas.options[1]=opcion1;
+			document.forms.formulario.comunas.options[2]=opcion2;
+			
+		}	
+
+
+		
+
+		</script>
+		
+		
+		
+		
+		
+		
+	</body
+
+
+</html>

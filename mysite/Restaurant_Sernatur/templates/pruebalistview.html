@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title> prueba </title>
+	</head>
+	<body>
+	
+			<ul>
+				
+				{% for rest in object_list %}
+				
+				<li><b>Nombre: </b>{{rest.nom_reg}}	</li>
+				{%if {rest.id}<10: break %}
+				{% endfor %}
+			
+			</ul>
+		
+	</body>
+
+
+
+
+</html>
